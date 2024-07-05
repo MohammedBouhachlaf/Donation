@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Donation DApp</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 350px;
+            max-width: 90%;
+        }
+        h1 {
+            color: #007BFF;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h2 {
+            margin-top: 20px;
+            color: #333;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
+        }
+        input, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        button {
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .no-bullet {
+            list-style-type: none; /* Remove bullets */
+            padding-left: 0; /* Remove padding */
+            margin-left: -40px; /* Align text to container */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Donation DApp</h1>
+        <div>
+            <h2>Faire un don</h2>
+            <input type="number" id="donationAmount" placeholder="Entrez le montant en Wei">
+            <button onclick="createDonation()">Donner</button>
+        </div>
+        <div>
+            <h2>Liste des dons</h2>
+            <button onclick="listDonations()">Afficher les dons</button>
+            <ul id="donationsList" class="no-bullet"></ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
